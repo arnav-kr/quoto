@@ -1,7 +1,7 @@
 {
     "name": "quoto",
     "short_name": "quoto",
-    "start_url": "/web",
+    "start_url": "/quoto/web",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
