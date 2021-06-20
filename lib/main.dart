@@ -1,45 +1,15 @@
-import 'dart:convert';
 import 'dart:math';
-import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'quote_factory.dart' as QuoteFactory;
 
-List jsonBackup = [];
+// ignore: non_constant_identifier_names
+List Quotes = QuoteFactory.quotes;
 
-Future<List> loadQuotes() async {
-  var jsonText = await rootBundle.loadString('assets/quotes.json');
-  var data = json.decode(jsonText);
-  jsonBackup = data;
-  return data;
-}
-
-//
-// Future getQuote() async {
-// This example uses the Google Books API to search for books about http.
-// https://developers.google.com/books/docs/overview
-// var url = Uri.https('type.fit', '/api/quotes');
-//
-// Await the http get response, then decode the json-formatted response.
-// var response = await http.get(url);
-// if (response.statusCode == 200) {
-// var jsonResponse = convert.jsonDecode(response.body) as List<dynamic>;
-// var dataquote = jsonResponse[0];
-// var quote = dataquote['text'];
-// var author = dataquote['author'];
-// var data = [quote, author];
-// return data;
-// } else {
-// return ['Couldn\'t get Quotes ☹.', ''];
-// }
-// }
-//
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.f
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -62,7 +32,6 @@ class MyApp extends StatelessWidget {
 }
 
 class _QuoteState extends State<Quote> {
-  List<dynamic> _quotes = [];
   dynamic _quote;
   _randomItem(list) {
     final random = new Random();
@@ -71,15 +40,12 @@ class _QuoteState extends State<Quote> {
   }
 
   _getQuote() async {
-    loadQuotes().then((val) => setState(() {
-          _quotes = val;
-          _quote = _randomItem(_quotes);
-        }));
+    _quote = _randomItem(Quotes);
   }
 
-  // _QuoteState() {
-  //   _getQuote();
-  // }
+  _QuoteState() {
+    _getQuote();
+  }
 
   @override
   void initState() {
@@ -119,30 +85,47 @@ class _QuoteState extends State<Quote> {
           ]),
           Container(
             margin: EdgeInsets.only(top: 64.0),
-            child: IconButton(
-              onPressed: () {
-                print("refreshed!");
-                ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text("Quotes Refreshed Successfully!"),
-                  ),
-                );
-                setState(() {
-                  _quote = _randomItem(_quotes);
-                });
-              },
-              icon: SvgPicture.asset(
-                'assets/dice.svg',
-                semanticsLabel: 'Random Quote',
-                width: 64,
-                height: 64,
-              ),
-              iconSize: 64,
-              tooltip: "Random Quote",
+            child: ClipOval(
+              child: Material(
               
+                color: Colors.blue,
+                child: Container(
+                  padding: EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: () {
+                      print("New Quote Loaded!");
+                      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text("Quote Loaded Successfully!"),
+                        ),
+                      );
+                      setState(() {
+                        _quote = _randomItem(Quotes);
+                      });
+                    },
+
+                    child: Icon(
+                      
+                      Icons.replay_rounded,
+                      color: Colors.white,
+                      size: 48,
+                    ),
+                    // icon: SvgPicture.asset(
+                    //   'assets/dice.svg',
+                    //   semanticsLabel: 'Random Quote',
+                    //   width: 64,
+                    //   height: 64,
+                    //   color: Colors.white,
+                    // ),
+                    splashColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                  ),
+                ),
+              ),
             ),
-          )
+          ),
         ]),
       ),
     );
@@ -154,4 +137,17 @@ class Quote extends StatefulWidget {
   _QuoteState createState() => _QuoteState();
 }
 
-void refresh() {}
+class TooltipText extends StatelessWidget {
+  final String text;
+  final String tooltip;
+
+  TooltipText({Key key, this.tooltip, this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: tooltip,
+      child: Text(text),
+    );
+  }
+}
