@@ -1,2 +1,4 @@
-build/web*.js linguist-vendored=true
-build/web*.html linguist-vendored=true
+build/web/*.js linguist-vendored=true
+build/web/*.html linguist-vendored=true
+web/*.js linguist-vendored=true
+web/*.html linguist-vendored=true
