@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 List jsonBackup = [];
 
@@ -117,28 +118,30 @@ class _QuoteState extends State<Quote> {
             ),
           ]),
           Container(
-              margin: EdgeInsets.only(top: 64.0),
-              child: IconButton(
-                  tooltip: "Refresh",
-                  onPressed: () {
-                    print("refreshed!");
-                    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text("Quotes Refreshed Successfully!"),
-                      ),
-                    );
-                    setState(() {
-                      _quote = _randomItem(_quotes);
-                    });
-                  },
-                  splashColor: Colors.red,
-                  hoverColor: Colors.blueAccent[100],
-                  iconSize: 80,
-                  icon: Icon(
-                    Icons.all_inclusive_outlined,
-                    color: Colors.blue,
-                  )))
+            margin: EdgeInsets.only(top: 64.0),
+            child: IconButton(
+              onPressed: () {
+                print("refreshed!");
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text("Quotes Refreshed Successfully!"),
+                  ),
+                );
+                setState(() {
+                  _quote = _randomItem(_quotes);
+                });
+              },
+              icon: SvgPicture.asset(
+                'assets/dice.svg',
+                semanticsLabel: 'Random Quote',
+                width: 64,
+                height: 64,
+              ),
+              iconSize: 64,
+              tooltip: "Random Quote",
+            ),
+          )
         ]),
       ),
     );
