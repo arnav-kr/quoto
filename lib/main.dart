@@ -140,6 +140,7 @@ class _QuoteState extends State<Quote> {
               ),
               iconSize: 64,
               tooltip: "Random Quote",
+              
             ),
           )
         ]),
