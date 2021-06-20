@@ -87,7 +87,6 @@ class _QuoteState extends State<Quote> {
             margin: EdgeInsets.only(top: 64.0),
             child: ClipOval(
               child: Material(
-              
                 color: Colors.blue,
                 child: Container(
                   padding: EdgeInsets.all(8.0),
@@ -106,7 +105,6 @@ class _QuoteState extends State<Quote> {
                     },
 
                     child: Icon(
-                      
                       Icons.replay_rounded,
                       color: Colors.white,
                       size: 48,
@@ -135,19 +133,4 @@ class _QuoteState extends State<Quote> {
 class Quote extends StatefulWidget {
   @override
   _QuoteState createState() => _QuoteState();
-}
-
-class TooltipText extends StatelessWidget {
-  final String text;
-  final String tooltip;
-
-  TooltipText({Key key, this.tooltip, this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Tooltip(
-      message: tooltip,
-      child: Text(text),
-    );
-  }
 }
