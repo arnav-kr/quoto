@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           centerTitle: true,
-          backgroundColor: Colors.blue,
+          backgroundColor: Color.fromRGBO(57, 177, 157, 1),
         ),
         body: Quote(),
       ),
@@ -87,7 +87,7 @@ class _QuoteState extends State<Quote> {
             margin: EdgeInsets.only(top: 64.0),
             child: ClipOval(
               child: Material(
-                color: Colors.blue,
+                color: Color.fromRGBO(57, 177, 157, 1),
                 child: Container(
                   padding: EdgeInsets.all(8.0),
                   child: InkWell(
@@ -103,19 +103,11 @@ class _QuoteState extends State<Quote> {
                         _quote = _randomItem(Quotes);
                       });
                     },
-
                     child: Icon(
                       Icons.replay_rounded,
                       color: Colors.white,
                       size: 48,
                     ),
-                    // icon: SvgPicture.asset(
-                    //   'assets/dice.svg',
-                    //   semanticsLabel: 'Random Quote',
-                    //   width: 64,
-                    //   height: 64,
-                    //   color: Colors.white,
-                    // ),
                     splashColor: Colors.transparent,
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
