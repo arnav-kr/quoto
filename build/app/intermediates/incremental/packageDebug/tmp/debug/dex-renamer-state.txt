@@ -1,0 +1,4 @@
+#Mon Jun 21 21:17:33 IST 2021
+base.0=C\:\\arnav\\flutter_projects\\quoto\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
