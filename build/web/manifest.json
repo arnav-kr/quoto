@@ -1,6 +1,6 @@
 {
-    "name": "quoto",
-    "short_name": "quoto",
+    "name": "Quoto",
+    "short_name": "Quoto",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

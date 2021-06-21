@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.quoto">
+    package="com.arnav.quoto">
    <application
-        android:label="quoto"
+        android:label="Quoto"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
