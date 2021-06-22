@@ -1,4 +1,0 @@
-io/flutter/plugins/GeneratedPluginRegistrant.java
- io.flutter.plugins.GeneratedPluginRegistrant
-com/arnav/quoto/BuildConfig.java
- com.arnav.quoto.BuildConfig
