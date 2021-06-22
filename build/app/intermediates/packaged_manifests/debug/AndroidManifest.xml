@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.quoto"
+    package="com.arnav.quoto"
     android:versionCode="1"
     android:versionName="1.0.0" >
 
@@ -27,7 +27,7 @@
             android:windowSoftInputMode="adjustResize" >
 
             <!--
-                 Specifies an Android theme to apply to this Activity as soon as
+           Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
                  to determine the Window background behind the Flutter UI.
@@ -36,7 +36,7 @@
                 android:name="io.flutter.embedding.android.NormalTheme"
                 android:resource="@style/NormalTheme" />
             <!--
-                 Displays an Android View that continues showing the launch screen
+           Displays an Android View that continues showing the launch screen
                  Drawable until Flutter paints its first frame, then this splash
                  screen fades out. A splash screen is useful to avoid any visual
                  gap between the end of Android's launch screen and the painting of
@@ -53,7 +53,7 @@
             </intent-filter>
         </activity>
         <!--
-             Don't delete the meta-data below.
+         Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
         -->
         <meta-data

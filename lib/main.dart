@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'quote_factory.dart' as QuoteFactory;
+import 'package:quoto/quote_factory.dart' as QuoteFactory;
 
 // ignore: non_constant_identifier_names
 List Quotes = QuoteFactory.quotes;
