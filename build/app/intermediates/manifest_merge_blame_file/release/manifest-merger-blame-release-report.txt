@@ -1,0 +1,85 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.arnav.quoto"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:2:3-23:17
+12        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+12-->[androidx.core:core:1.1.0] C:\Users\aruns\.gradle\caches\transforms-2\files-2.1\2e94107f30f39be366a17347c2bf100b\core-1.1.0\AndroidManifest.xml:24:18-86
+13        android:icon="@mipmap/ic_launcher"
+13-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:2:38-72
+14        android:label="Quoto" >
+14-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:2:16-37
+15        <activity
+15-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:3:5-19:16
+16            android:name="com.arnav.quoto.MainActivity"
+16-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:3:15-43
+17            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+17-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:3:110-260
+18            android:hardwareAccelerated="true"
+18-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:3:261-295
+19            android:launchMode="singleTop"
+19-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:3:44-74
+20            android:theme="@style/LaunchTheme"
+20-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:3:75-109
+21            android:windowSoftInputMode="adjustResize" >
+21-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:3:296-338
+22
+23            <!--
+24           Specifies an Android theme to apply to this Activity as soon as
+25                 the Android process has started. This theme is visible to the user
+26                 while the Flutter UI initializes. After that, this theme continues
+27                 to determine the Window background behind the Flutter UI.
+28            -->
+29            <meta-data
+29-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:8:7-114
+30                android:name="io.flutter.embedding.android.NormalTheme"
+30-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:8:18-73
+31                android:resource="@style/NormalTheme" />
+31-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:8:74-111
+32            <!--
+33           Displays an Android View that continues showing the launch screen
+34                 Drawable until Flutter paints its first frame, then this splash
+35                 screen fades out. A splash screen is useful to avoid any visual
+36                 gap between the end of Android's launch screen and the painting of
+37                 Flutter's first frame.
+38            -->
+39            <meta-data
+39-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:14:7-132
+40                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+40-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:14:18-82
+41                android:resource="@drawable/launch_background" />
+41-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:14:83-129
+42
+43            <intent-filter>
+43-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:15:7-18:23
+44                <action android:name="android.intent.action.MAIN" />
+44-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:16:9-61
+44-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:16:17-58
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:17:9-69
+46-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:17:19-66
+47            </intent-filter>
+48        </activity>
+49        <!--
+50         Don't delete the meta-data below.
+51             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+52        -->
+53        <meta-data
+53-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:22:5-68
+54            android:name="flutterEmbedding"
+54-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:22:16-47
+55            android:value="2" />
+55-->C:\arnav\flutter_projects\quoto\android\app\src\main\AndroidManifest.xml:22:48-65
+56    </application>
+57
+58</manifest>

@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           centerTitle: true,
-          backgroundColor: Color.fromRGBO(57, 177, 157, 1),
+          backgroundColor: Color.fromRGBO(57, 177, 157, 1.0),
         ),
         body: Quote(),
       ),
