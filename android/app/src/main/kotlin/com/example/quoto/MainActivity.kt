@@ -1,4 +1,4 @@
-package com.example.quoto
+package com.arnav.quoto
 
 import io.flutter.embedding.android.FlutterActivity
 
